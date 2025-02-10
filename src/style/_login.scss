@@ -1,0 +1,87 @@
+.login{
+    height: calc(100vh - 70px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .error{
+        background-color: rgba(255, 0, 0, 0.644);
+        width: 100%;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .errorIcon{
+            font-size: 35px;
+        }
+    }
+    .form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        height: 40%;
+        padding: 40px 25px 40px 25px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgb(8, 184, 219);
+        opacity: 0;
+        position: relative;
+        animation: bottomAnimate 0.4s linear forwards;
+        @media (max-width: $mobile-view) {
+          min-height: 50%;
+        }
+        h4{
+            color: gray;
+            font-size: 25px;
+            font-weight: 200;
+        }
+        
+        gap: 10px;
+        form{
+            display: flex;
+            flex-direction: column;
+            color: gray;
+            gap: 10px;
+            input{
+                color: gray;
+                padding: 10px 0 10px 0;
+                width: 350px;
+                border-radius: 5px;
+                border: 1px solid gray;
+                background: transparent;
+                color: gray;
+                @media (max-width: $mobile-view) {
+                    max-width: 250px;
+                    padding: 8px 0 8px 0;
+                    }
+                &:focus{
+                 outline: none;
+                }
+            }
+            textarea{
+                padding: 40px 0 40px 0;
+                width: 350px;
+                color: gray;
+
+                border-radius: 5px;
+                border: 1px solid gray;
+                background: transparent;
+            }
+            button{
+                width: 150px;
+                padding: 10px;
+                border: 1px solid gray;
+                color: gray;
+                border-radius: 40px;
+                background: none;
+                align-self: center;
+                margin-top: 15px;
+                &:hover {
+                    cursor: pointer;
+                    transform: scale(1.10);
+                    transition: 0.2s;
+                 }
+            }
+        }
+    }
+}

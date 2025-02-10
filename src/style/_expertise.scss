@@ -1,0 +1,344 @@
+.loader {
+    width: 20px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: yellow;
+    box-shadow: 0 0 0 0 yellow;
+    animation: l2 1.5s infinite linear;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+   
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      box-shadow: 0 0 0 0 yellow;
+      animation: l2 1.5s infinite linear;
+      animation-delay: -0.5s;
+    }
+  
+    &:after {
+      animation-delay: -1s;
+    }
+  }
+  
+  @keyframes l2 {
+    100% {
+      box-shadow: 0 0 0 40px #0000;
+    }
+  }
+.expertises {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+
+   
+   .expimage{
+    width: 100px;
+    height: 100px;
+   }
+
+    .redirectBtn {
+        width: 70%;
+
+        a {
+            text-decoration: none;
+            max-width: 15px;
+
+            button {
+                padding: 15px;
+                border-radius: 30px;
+                border: 1px solid white;
+                background: none;
+                color: white;
+
+                &:hover {
+                    cursor: pointer;
+                    transform: scale(1.1);
+                    transition: 0.4s;
+                }
+            }
+        }
+    }
+
+    .delete {
+        color: red;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .specializes {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-top: 40px;
+        width: 70%;
+        padding: 10px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-sizing: border-box;
+        position: relative;
+        opacity: 0;
+        animation: bottomAnimate 0.5s ease forwards;
+
+        @media (max-width: $mobile-view) {
+            width: 100%;
+            flex-direction: column;
+
+        }
+
+        @media ((min-width: $mobile-view) and (max-width: $tablet-view)) {
+            width: 85%;
+            flex-direction: column;
+        }
+
+        h2 {
+            color: black;
+            width: 100%;
+        }
+
+        .specialize {
+            width: 40%;
+            color: black;
+            display: flex;
+            position: relative;
+            opacity: 0;
+            animation: rightAnimate 0.5s ease forwards;
+            animation-delay: 0.5s;
+
+            @media (max-width: $tablet-view) {
+                width: 100%;
+
+            }
+
+            h2 {
+
+                font-size: 20px;
+
+                @media (max-width: $tablet-view) {
+                    font-size: 18px;
+                }
+            }
+
+            span {
+                &:first-child {
+                    padding-right: 10px;
+                    font-size: 50px;
+                    height: 100%;
+
+                    @media (max-width: $tablet-view) {
+                        font-size: 40px;
+                    }
+                }
+            }
+
+            span {
+                font-size: initial;
+
+            }
+
+
+
+            .infos {
+                height: 100%;
+
+                display: flex;
+                flex-direction: column;
+
+                p {
+                    text-align: justify;
+                    font-size: 13px;
+
+                    @media (max-width: $tablet-view) {
+                        width: 100%;
+
+                    }
+                }
+            }
+        }
+    }
+
+    .certificates {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+        flex-wrap: wrap;
+        width: 70%;
+        padding: 10px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-sizing: border-box;
+        position: relative;
+        opacity: 0;
+        animation: bottomAnimate 0.5s ease forwards;
+        animation-delay: 1s;
+
+        h2 {
+            color: black;
+            width: 100%;
+        }
+
+        @media (max-width: $mobile-view) {
+            width: 100%;
+            flex-direction: column;
+
+        }
+
+        @media ((min-width: $mobile-view) and (max-width: $tablet-view)) {
+            width: 85%;
+            flex-direction: column;
+        }
+
+        .certificate {
+            width: 40%;
+            color: black;
+            display: flex;
+            position: relative;
+            opacity: 0;
+            animation: rightAnimate 0.5s ease forwards;
+            animation-delay: 1.5s;
+
+            @media (max-width: $tablet-view) {
+                width: 100%;
+            }
+
+            h2 {
+                color: black;
+                font-size: 20px;
+
+                @media (max-width: $tablet-view) {
+                    font-size: 18px;
+                }
+            }
+
+            span {
+                &:first-child {
+                    padding-right: 10px;
+                    font-size: 50px;
+                    height: 100%;
+
+                    @media (max-width: $tablet-view) {
+                        font-size: 40px;
+                    }
+                }
+            }
+
+            span {
+                font-size: initial;
+
+            }
+
+
+
+            .infos {
+                height: 100%;
+
+                display: flex;
+                flex-direction: column;
+
+                p {
+
+                    overflow: hidden;
+                    width: 350px;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+
+    .awards {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+        flex-wrap: wrap;
+        width: 70%;
+        padding: 10px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-sizing: border-box;
+        position: relative;
+        opacity: 0;
+        animation: bottomAnimate 0.5s ease forwards;
+        animation-delay: 1s;
+
+        @media (max-width: $mobile-view) {
+            width: 100%;
+            flex-direction: column;
+
+        }
+
+        @media ((min-width: $mobile-view) and (max-width: $tablet-view)) {
+            width: 85%;
+            flex-direction: column;
+        }
+
+        h2 {
+            color: black;
+            width: 100%;
+        }
+
+        .award {
+            width: 40%;
+            color: black;
+            display: flex;
+            position: relative;
+            opacity: 0;
+            animation: rightAnimate 0.5s ease forwards;
+            animation-delay: 1.5s;
+            @media (max-width: $tablet-view) {
+                width: 100%;
+            }
+            h2 {
+
+                font-size: 20px;
+
+                @media (max-width: $tablet-view) {
+                    font-size: 18px;
+                }
+            }
+
+            span {
+                &:first-child {
+                    padding-right: 10px;
+                    font-size: 50px;
+                    height: 100%;
+
+                    @media (max-width: $tablet-view) {
+                        font-size: 40px;
+                    }
+                }
+            }
+
+            span {
+                font-size: initial;
+
+            }
+
+
+
+            .infos {
+                height: 100%;
+
+                display: flex;
+                flex-direction: column;
+
+                p {
+
+                    overflow: hidden;
+                    width: 350px;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&family=Playwrite+CZ:wght@100..400&display=swap');
+
+.home {
+
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   height: calc(100vh - 70px);
+   overflow: hidden;
+   gap: 45px;
+
+   @media (max-width: $mobile-view) {
+      font-size: 1.8rem;
+      height: 150vh;
+      text-align: center;
+
+   }
+
+   .left-side {
+
+      font-size: 50px;
+      animation: scaleAnimate 0.7s ease-in forwards;
+
+      @media (max-width: $tablet-view) {
+
+         font-size: 2.2rem;
+         text-align: center;
+
+      }
+   
+
+      h3 {
+         font-weight: 200;
+         text-shadow: 3px 3px 8px #1cb8db;
+       
+      }
+
+      span {
+         color: yellow;
+         text-shadow: 3px 3px 8px #e36d12;
+
+         @media (max-width: $mobile-view) {
+
+            font-size: 2.2rem;
+         }
+      }
+
+      @keyframes scaleAnimate {
+         0% {
+            opacity: 0;
+            transform: scale(0.50);
+         }
+
+         100% {
+            opacity: 1;
+            transform: scale(1);
+         }
+      }
+   }
+
+   .right-side {
+      display: flex;
+      gap: 50px;
+
+      button {
+         width: 150px;
+         padding: 8px;
+         border: 1px solid white;
+         border-radius: 40px;
+         background: none;
+         color: white;
+         font-size: 20px;
+
+         @media (max-width: $mobile-view) {
+            padding: 5px;
+            width: 120px;
+
+         }
+
+         &:hover {
+            cursor: pointer;
+            transform: scale(1.1);
+         }
+      }
+
+
+      .propertyBtn {
+         position: relative;
+         opacity: 0;
+         animation: leftAnimate 0.5s ease-in forwards;
+         animation-delay: 0.7s;
+      }
+
+      .contactBtn {
+         position: relative;
+         opacity: 0;
+         animation: rightAnimate 0.5s ease-in forwards;
+         animation-delay: 1.2s;
+
+      }
+
+
+
+      @keyframes rightAnimate {
+         0% {
+
+            right: -50px;
+         }
+
+         100% {
+            right: 0;
+            opacity: 1;
+         }
+      }
+
+      @keyframes leftAnimate {
+         0% {
+
+            left: -50px;
+         }
+
+         100% {
+            left: 0;
+            opacity: 1;
+         }
+      }
+
+      @keyframes bottomAnimate {
+         0% {
+
+
+            bottom: -50px;
+         }
+
+         100% {
+            opacity: 1;
+            bottom: 0;
+         }
+      }
+   }
+
+   .down-side {
+      width: 50%;
+      display: flex;
+      justify-content: space-evenly;
+      position: relative;
+      opacity: 0;
+      animation: bottomAnimate 0.5s ease-in forwards;
+      animation-delay: 1.7s;
+
+      @media (max-width: $mobile-view) {
+         display: flex;
+         flex-direction: column;
+         gap: 40px;
+      }
+
+      .homeImg {
+         width: 150px;
+         height: 70px;
+      }
+
+   }
+}

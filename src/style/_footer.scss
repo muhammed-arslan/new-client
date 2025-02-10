@@ -1,0 +1,38 @@
+.footer{
+    background: rgb(24,26,32);
+    color: white;
+    display: flex;
+    padding-top: 50px;
+    margin-top: 50px;
+    justify-content: space-around;
+    width: 100%;
+    min-height: 50vh;
+
+    span{
+        color: rgb(185, 185, 185);
+        font-weight: 200;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    .footerInfos{
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        gap: 20px;
+       
+    }   
+    .footerSitemap{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        a{
+            text-decoration: none;
+            color: rgb(209, 207, 207);
+            &:hover{
+                color: white;
+            }
+        }
+    }
+}

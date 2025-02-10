@@ -1,0 +1,38 @@
+.notfound{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: calc(100vh - 75px);
+    gap: 40px;
+    .notfoundtext{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        .notfoundtitle{
+            font-size: 250px;
+        
+         }
+         .notfoundesc{
+             color: gray;
+             font-size: 40px;
+             margin-top: -40px;
+         }
+    }
+
+    button{
+        padding: 20px;
+        border: 1px solid white;
+        border-radius: 40px;
+        background: transparent;
+      
+        &:hover{
+            cursor: pointer;
+        }
+        a{
+            color: white;
+            text-decoration: none;
+        }
+    }
+}

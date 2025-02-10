@@ -1,0 +1,223 @@
+
+.contact {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: calc(100vh - 70px);
+    @media (max-width: $tablet-view) {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgb(219, 205, 8);
+        padding: 30px 20px 30px 20px;
+        min-height: 75%;
+        min-width: 25%;
+        max-height: 90%;
+        max-width: 35%;
+        color: black;
+        gap: 20px;
+        opacity: 0;
+        position: relative;
+        animation: bottomAnimate 0.5s linear forwards;
+
+        @media (max-width: $mobile-view) {
+
+            box-sizing: border-box;
+            max-width: 95%;
+            margin-top: 40px;
+        }
+
+        @media ((min-width: $mobile-view) and (max-width: $tablet-view)) {
+
+            max-width: 55%;
+            margin-top: 40px;
+            padding: 40px 25px 40px 25px;
+
+        }
+
+        .contacts {
+            display: flex;
+            flex-direction: column;
+            height: 250px;
+
+            justify-content: space-between;
+            opacity: 0;
+            position: relative;
+            animation: rightAnimate 0.4s linear forwards;
+            animation-delay: 0.5s;
+
+            button {
+                width: 30%;
+                padding: 3px;
+                background: none;
+                border-radius: 5px;
+            }
+
+            a {
+                color: black;
+                text-decoration: none;
+            }
+
+            span {
+                display: flex;
+                width: 450px;
+                align-items: center;
+                gap: 20px;
+
+                @media (max-width: $mobile-view) {
+                    width: initial;
+                }
+
+                svg {
+                    font-size: 20px;
+                    color: black;
+
+                }
+            }
+        }
+
+        iframe {
+            border-radius: 5px;
+            border: 1px solid gray;
+            width: 450px;
+            height: 250px;
+            opacity: 0;
+            position: relative;
+            animation: bottomAnimate 0.8s linear forwards;
+            animation-delay: 0.5s;
+
+            @media (max-width: $mobile-view) {
+                width: 300px;
+                height: 150px;
+            }
+        }
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        min-height: 75%;
+        min-width: 22%;
+        max-height: 95%;
+        max-width: 30%;
+        border-radius: 10px;
+        padding: 20px 10px 20px 10px;
+
+        box-shadow: 0 0 15px rgb(8, 184, 219);
+        opacity: 0;
+        position: relative;
+        animation: rightAnimate 0.4s linear forwards;
+        animation-delay: 0.5s;
+
+        @media (max-width: $mobile-view) {
+            min-width: 95%;
+            max-width: 95%;
+            box-sizing: border-box;
+        }
+
+        @media ((min-width: $mobile-view) and (max-width: $tablet-view)) {
+            min-width: 55%;
+            max-width: 55%;
+            align-items: center;
+        }
+
+        h4 {
+            color: gray;
+            font-size: 25px;
+            font-weight: 200;
+        }
+
+        gap: 10px;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            color: gray;
+            gap: 10px;
+
+            @media (max-width: $mobile-view) {
+                max-width: 100%;
+                align-items: center;
+            }
+            @media ((min-width: $mobile-view) and (max-width: $tablet-view)) {
+                max-width: 100%;
+                align-items: center;
+            }
+
+            input {
+                color: gray;
+                padding: 10px 0 10px 0;
+                width: 350px;
+                border-radius: 5px;
+                border: 1px solid gray;
+                background: transparent;
+                color: gray;
+
+                &:focus {
+                    outline: none;
+                }
+
+                @media (max-width: $mobile-view) {
+                    max-width: 100%;
+                    align-self: center;
+                    padding: 8px 0 8px 0;
+                }
+
+                @media ((min-width: $mobile-view) and (max-width: $tablet-view)) {
+                    max-width: 100%;
+                }
+            }
+
+            textarea {
+                padding: 40px 0 40px 0;
+                width: 350px;
+                color: gray;
+
+                border-radius: 5px;
+                border: 1px solid gray;
+                background: transparent;
+
+                @media (max-width: $mobile-view) {
+                    width: 100%;
+                    padding: 30px 0 30px 0;
+                }
+
+                @media ((min-width: $mobile-view) and (max-width: $tablet-view)) {
+                    max-width: 100%;
+                }
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            button {
+                width: 150px;
+                padding: 10px;
+                border: 1px solid gray;
+                color: gray;
+                border-radius: 40px;
+                background: none;
+                align-self: center;
+                margin-top: 15px;
+
+                &:hover {
+                    cursor: pointer;
+                    transform: scale(1.10);
+                    transition: 0.2s;
+                }
+            }
+        }
+    }
+}
