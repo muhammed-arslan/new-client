@@ -49,10 +49,10 @@
             background-color: rgba(0, 0, 0, 0.068);
             color: white;
             border: 1px solid white;
-
+  
             @media (max-width: $mobile-view) {
                 height: 60px;
-
+                align-self: center;
             }
 
 
